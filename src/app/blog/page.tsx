@@ -91,7 +91,7 @@ const Blog = () => {
               return (
                 <li key={item.id} className='flex gap-5 my-2.5 border-b-2 border-b-emerald-100'>
                       <div className="content relative py-5">
-                          <Link href={`/blog/${item.title}`}><h2 className="title text-2xl hover:text-emerald-600">{item.title}</h2></Link>
+                          <Link href={`/blog/${item.id}`}><h2 className="title text-2xl hover:text-emerald-600">{item.title}</h2></Link>
                           <b className='my-2.5 text-gray-400 text-sm'>{item.time}</b>
                       </div>
                 </li>

@@ -29,8 +29,8 @@ const blogs: Blog[] = [
 ];
 
 // Next.js app routerdagi params bilan ishlash
-const BlogDetails = ({ params }: { params: { id: string } }) => {
-  const blog = blogs.find((item) => item.title === params.id);
+const BlogDetails = ({ params }: { params: { id: number } }) => {
+  const blog = blogs.find((item) => item.id === params.id);
 
   if (!blog) {
     return <div className="p-5">Blog topilmadi</div>;
