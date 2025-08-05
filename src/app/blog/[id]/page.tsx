@@ -27,15 +27,18 @@ const blogs: Blog[] = [
     time: '24.01.2023',
   },
 ];
+interface BlogDetailsProps {
+  params: {
+    id: string; // 
+  };
+}
 
-// Next.js app routerdagi params bilan ishlash
-const BlogDetails = ({ params }: { params: { id: number } }) => {
-  const blog = blogs.find((item) => item.id === params.id);
+const BlogDetails = ({ params }: BlogDetailsProps) => {
+  const blog = blogs.find((item) => item.id === Number(params.id)); 
 
   if (!blog) {
     return <div className="p-5">Blog topilmadi</div>;
   }
-
   return (
     <div className="p-5">
       <h1 className="text-4xl font-bold mb-3">{blog.title}</h1>

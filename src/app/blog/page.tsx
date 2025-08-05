@@ -78,7 +78,7 @@ const Blog = () => {
                         </div>
                         <div className="content relative p-5">
                             <b className='my-2.5 text-gray-700 text-sm'>{item.time}</b>
-                            <Link href={`/blog/${item.title}`}><h2 className="title text-xl hover:text-emerald-600">{item.title}</h2></Link>
+                            <Link href={`/blog/${item.id}`}><h2 className="title text-xl hover:text-emerald-600">{item.title}</h2></Link>
                         </div>
                     </div>
                 )
